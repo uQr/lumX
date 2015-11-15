@@ -291,7 +291,7 @@ angular.module('lumx.select', [])
                         var div = angular.element('<div/>');
                         var wrapper = angular.element('<div/>').append(clone);
                         var content = $compile(wrapper.html())(newScope);
-                        clone.html($interpolate(content.html())(newScope));
+                        clone.html($interpolate(angular.element('<div/>').append(content).html())(newScope));
 
                         if ($scope.lxSelectMultiple)
                         {
